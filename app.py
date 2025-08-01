@@ -63,7 +63,7 @@ print("🔹 Linear Regression prediction:", lr.predict(new_round)[0])
 print("🔸 Decision Tree prediction:", dt.predict(new_round)[0])
 print("🔹 Random Forest prediction:", rf.predict(new_round)[0])
 
-!pip install streamlit
+# !pip install streamlit ← مش ضروري داخل Streamlit Cloud
 
 # تحميل الملف تلقائيًا من الملفات المرفوعة
 file_name = list(uploaded.keys())[0]  # ← بيجيب اسم أول ملف مرفوع فعليًا
