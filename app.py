@@ -12,8 +12,10 @@ import pandas as pd
 import numpy as np
 
 # تحميل الملف من جهازك داخل Google Colab
-from google.colab import files
-uploaded = files.upload()
+uploaded_file = st.file_uploader("ارفع ملف البيانات هنا", type=["xlsx"])
+if uploaded_file is not None:
+    df = pd.read_excel(uploaded_file)
+
 
 # قراءة أول ملف تم رفعه بصيغة Excel
 df = pd.read_excel(list(uploaded.keys())[0])
