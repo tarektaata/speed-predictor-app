@@ -12,9 +12,10 @@ import pandas as pd
 import numpy as np
 
 # تحميل الملف من جهازك داخل Google Colab
-uploaded_file = st.file_uploader("ارفع ملف البيانات هنا", type=["xlsx"])
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
+    st.write("📊 معاينة أول 5 صفوف من الملف:")
+    st.dataframe(df.head())
 
 
 # قراءة أول ملف تم رفعه بصيغة Excel
